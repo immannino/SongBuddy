@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import * as data from './config.local.json';
+import * as data from './config.json';
 
 @Injectable()
 export class AppConfig {
