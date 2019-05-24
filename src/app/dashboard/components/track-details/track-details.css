@@ -1,6 +1,14 @@
-
-
 .album_cover {
     box-shadow: 5px 5px red;
     border: 1px solid red;
+}
+
+.container {
+    display: flex;
+}
+
+@media (max-width: 765px) {
+    .container {
+        flex-direction: column;
+    }
 }
