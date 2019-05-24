@@ -1,0 +1,6 @@
+{
+    "spotify": {
+        "clientid": "d3e8a12fada34c29a4defac7528629ed",
+        "redirect_uri": "https://immannino.github.io/SongBuddy/login"
+    }
+}

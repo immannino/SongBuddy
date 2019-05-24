@@ -1,0 +1,11 @@
+.title {
+    text-decoration: underline;
+}
+
+.container {
+    background: linear-gradient(var(--accent-2), var(--accent)) ;
+}
+
+.logo {
+    filter: drop-shadow(5px 5px black);
+}

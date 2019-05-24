@@ -1,0 +1,15 @@
+.container {
+    background: linear-gradient(var(--accent-2), var(--accent));
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 3em auto 4.25em;
+    grid-template-columns: 1;
+}
+
+.footer {
+    background-color: white;
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
