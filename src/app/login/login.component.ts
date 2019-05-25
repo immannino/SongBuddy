@@ -76,7 +76,7 @@ export class LoginComponent implements OnInit {
         /**
          * Update scopes to appropriate values for what information I'm requesting from the user.
          */
-        let scopes: string = 'user-read-currently-playing user-read-playback-state';
+        let scopes: string = 'user-read-currently-playing user-read-playback-state user-modify-playback-state';
 
         let url = 'https://accounts.spotify.com/authorize' +
         '?client_id=' + this.client_id +

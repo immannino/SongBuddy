@@ -11,6 +11,7 @@ import { SafeUrlPipe } from 'src/lib/utils/safeurl.pipe';
 import { AppConfig } from './app.config';
 import { SpotifyService } from 'src/lib/service/spotify.service';
 import { TrackDetailsComponent } from './dashboard/components/track-details/track-details.component';
+import { DesignerComponent } from './dashboard/components/designer/designer.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TrackDetailsComponent } from './dashboard/components/track-details/trac
     LoginComponent,
     DashboardComponent,
     TrackDetailsComponent,
+    DesignerComponent,
     SafeUrlPipe
   ],
   imports: [

@@ -1,6 +1,13 @@
 <div class="container">
-    <nav class="tc pt2">
-        <button class="button primary" routerLink="['/login']">Logout</button>
+    <nav class="tc pt2 pb2 bg-washed-red">
+        <span *ngIf="currentSong">
+            <button class="button neutral ml2 mr2" (click)="previousSong();" [disabled]="!currentSong.is_playing">Previous</button>
+        </span>
+        <button class="button primary ml2 mr2" routerLink="['/login']">Logout</button>
+        <button class="button tertiary ml2 mr2" routerLink="['/login']">Designer</button>
+        <span *ngIf="currentSong">
+            <button class="button neutral ml2 mr2" (click)="nextSong()" [disabled]="!currentSong.is_playing">Next</button>
+        </span>
     </nav>
     <div *ngIf="currentSong">
        <track-details></track-details>

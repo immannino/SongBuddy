@@ -16,6 +16,18 @@ export class SpotifyService {
 
         return this.http.get<CurrentSongContext>(`${this.url}/me/player/currently-playing`, { headers });
     }
+
+    nextSong(): any {
+        const headers = this.getHeaders();
+        
+        return this.http.post(`${this.url}/me/player/next`, null, { headers });
+    }
+
+    previousSong(): any {
+        const headers = this.getHeaders();
+
+        return this.http.post(`${this.url}/me/player/previous`, null, { headers });
+    }
     
     getHeaders(): HttpHeaders {
         const userData: UserData = JSON.parse(window.localStorage.getItem('userData'));

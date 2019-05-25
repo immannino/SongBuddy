@@ -110,6 +110,12 @@ body {
     box-shadow: 3px 3px var(--tertiary);
 }
 
+.button.neutral {
+    background-color: var(--accent);
+    border: 1px solid grey;
+    box-shadow: 3px 3px grey;
+}
+
 .button:active {
     cursor: pointer;
     transform: translate(3px, 3px);
