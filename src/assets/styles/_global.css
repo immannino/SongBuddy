@@ -88,6 +88,12 @@ body {
     display: inline-block;
 }
 
+@media (max-width: 765px) {
+    .button {
+        font-size: 14px;
+    }
+}
+
 .button:hover {
     cursor: pointer;
     filter: blur(1px);

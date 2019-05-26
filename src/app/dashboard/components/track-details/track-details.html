@@ -3,9 +3,10 @@
         <div class="album_cover">
             <img class="album_cover_image" [src]="currentSong.item.album.images[0].url" [alt]="currentSong.item.album.name">
         </div>
-        <div class="song_details">
+        <div class="song_details tc">
+            <!-- <qrcode class="pa2 center tc" [qrdata]="currentSong.item.external_urls.spotify" size="256" leve="M"></qrcode> -->
             <span class="song_name">{{currentSong.item.name}}</span>
-            <span class="song_artist">{{currentSong.item.artists[0].name}}</span>
+        <span class="song_artist">{{currentSong.item.artists[0].name}}</span>   
         </div>
     </div>
 </div>
