@@ -1,39 +1,55 @@
 .demo-1 {
 }
-.demo-1 > .container {
+.container {
     display: flex;
     justify-content: center;
     padding: 1.5em;
 }
 
-.demo-1 > .container > .album_cover > .album_cover_image {
-    box-shadow: 5px 5px red;
-    border: 1px solid red;
+ .album_cover_image {
+    box-shadow: 10px 10px white;
+    border: 3px solid white;
 }
 
-.demo-1 > .container > .song_details {
+ .song_details {
     margin: auto 0 ;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3em;
 }
 
-.demo-1  > .container > .song_details > .song_name {
+ .song_name {
     font-weight: bold;
-    font-size: 3.5em;
-    padding: 1.5em;
+    font-size: 5em;
+    /* padding: 1.5em; */
 }
 
-.demi-1 > .container > .song_details > .song_artist {
+.song_artist {
     font-style: italic;
-    font-size: 3.5em;
+    font-size: 4.5em;
     text-decoration: underline;
 }
 
 @media (max-width: 765px) {
-    .demo-1.container {
+    .container {
         flex-direction: column;
         max-width: 100vw;
     }
 
-    .demo-1.album_cover {
+    .album_cover {
+        margin: 0 auto;
         width: 150px;
+    }
+
+    .song_details {
+        padding: 1.5em 0 0 0;
+    }
+
+    .song_name {
+        font-size: 3em;
+    }
+
+    .song_artist {
+        font-size: 2.5em;
     }
 }

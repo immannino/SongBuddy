@@ -52,8 +52,18 @@ export class LoginComponent implements OnInit {
     ngOnInit() {
         this.client_id =  this.config.getConfig('spotify').clientid;
         this.generateSpotifyLoginUrl();
+        this.checkForRefresh();
     }
 
+    checkForRefresh() {
+        const shouldRefresh = Boolean(window.localStorage.getItem('refresh'));
+
+        if (shouldRefresh) {
+            console.info(`%c Refreshing Spotify Session`, 'border: 3px solid #becbff; margin:0.5em;font-size: 22px; color: white; padding:1em; background:linear-gradient(120deg, salmon, white);');
+            window.localStorage.removeItem('refresh');
+            this.refreshLoginState();
+        }
+    }
     userSpotifyLogin(responseItems: string[]) {
         let tempUserData: UserData = {
             userAccessToken: responseItems[0].split("=")[1],
@@ -68,6 +78,12 @@ export class LoginComponent implements OnInit {
         window.localStorage.setItem('userData', JSON.stringify(tempUserData));
 
         this.router.navigate(['/dashboard']);
+    }
+
+    refreshLoginState() {
+        setTimeout(() => {
+            document.getElementById('spotify').click();
+        }, 500);
     }
 
     generateSpotifyLoginUrl() {
