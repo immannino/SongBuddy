@@ -4,7 +4,7 @@
             <button class="button neutral ml2 mr2" (click)="previousSong();" [disabled]="!currentSong.is_playing">Previous</button>
         </span>
         <button class="button primary ml2 mr2" routerLink="['/login']">Logout</button>
-        <button class="button tertiary ml2 mr2" routerLink="['/login']">Designer</button>
+        <button class="button tertiary ml2 mr2" routerLink="['/login']" disabled="true">Designer</button>
         <span *ngIf="currentSong">
             <button class="button neutral ml2 mr2" (click)="nextSong()" [disabled]="!currentSong.is_playing">Next</button>
         </span>
@@ -25,9 +25,11 @@
         </section>
     </div>
     <footer class="v-base footer">
-        <div class="center-v"><a href="https://immannino.github.io/">Tony</a> made this. The current year is {{getYear()}} 🐳</div>
-        <a href="https://www.spotify.com" aria-label="Spotify music website" class="pointer">
-            <img class="mw3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png" alt="spotify logo">
-        </a>
+        <div class="center-v"><a class="pl2" href="https://immannino.github.io/">Tony</a> made this. The current year is {{getYear()}} <a href="https://savethewhales.org/" target="_blank">🐳</a></div>
+        <div class="center-v">
+            <a href="https://www.spotify.com" aria-label="Spotify music website" class="pointer">
+                <img class="spotify mw3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png" alt="spotify logo">
+            </a>
+        </div>
     </footer>
 </div>

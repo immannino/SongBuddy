@@ -32,14 +32,14 @@ export class SpotifyService {
     getHeaders(): HttpHeaders {
         const userData: UserData = JSON.parse(window.localStorage.getItem('userData'));
 
-        if (!userData && this.isExpired(userData.expiration_time)) {
+        if (!userData || this.isExpired(userData.expiration_time)) {
+            window.localStorage.setItem('refresh', 'true');
             this.router.navigate(['/login']);
+        } else {
+            return new HttpHeaders({
+                "Authorization": `Bearer ${userData.userAccessToken}`
+            });
         }
-
-        return new HttpHeaders({
-            "Authorization": `Bearer ${userData.userAccessToken}`
-        });
-
     }
 
     isExpired(expiration, timestamp = new Date().getTime()) {

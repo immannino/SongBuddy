@@ -31,7 +31,9 @@ export class TrackDetailsComponent implements OnInit {
     }
 
     setSongTitle() {
-        this.fullTitle = `${this.currentSong.item.name} - ${this.currentSong.item.artists[0].name}`;
+        const playStatus = this.currentSong.is_playing ? '🔊' : '🔇';
+        this.fullTitle = `${playStatus} ${this.currentSong.item.name} - ${this.currentSong.item.artists[0].name}`;
+
         this.dynamicTitle = this.fullTitle;
 
         this.title.setTitle(this.fullTitle);
